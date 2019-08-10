@@ -1,6 +1,5 @@
-var indexRouter = require('../routes/index');
+var indexRouter = require('../modules/routes');
 
 module.exports = (app) => {
     app.use('/', indexRouter);
-    // !-- Do not remove this line --! //
 };
