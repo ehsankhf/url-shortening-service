@@ -4,10 +4,10 @@ const app = require('../app')
 const mongo = require('../common/mongo')
 
 describe('GET /', () => {
-    beforeAll(() => {
+    beforeEach(() => {
         mongo.connect();
     });
-    afterAll(async () => {
+    afterEach(async () => {
         await mongo.removeAll();
         return mongo.disconnect();
     });

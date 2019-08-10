@@ -22,11 +22,27 @@ class Controller {
         let urlObject = await Models.findOne({ url })
         if (!urlObject) {
             urlObject = {
-                url, short_url: uuidv3('http://example.com/hello', uuidv3.URL)
+                url, short_url_id: uuidv3('http://example.com/hello', uuidv3.URL)
             }
             await Models.create(urlObject)
         }
         res.send(urlObject)
+    }
+
+    async redirection(req, res) {
+        const { short_url_id } = req.params
+
+        if (!short_url_id) {
+            return res.setHeader(400).send()
+        }
+
+        let urlObject = await Models.findOne({ short_url_id })
+
+        if (!urlObject) {
+            return res.setHeader(400).send()
+        }
+
+        res.redirect(urlObject.url)
     }
 }
 
