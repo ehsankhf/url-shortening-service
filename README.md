@@ -1,2 +1,27 @@
 # url-shortening-service
 URL shortening service implemented full-stack with Vue.js and Express.js
+
+#### Steps to start the application
+
+In both of the following methods, ports are a following:
+  1. Client-side: PORT 8080
+  2. Server-side: PORT 3000
+  
+###### Without Docker
+
+  * Client-side: `cd client; yarn; yarn serve`
+  * Server-side: `cd server; yarn; yarn start`
+
+###### With Docker
+  * `docker-compose up`
+
+#### Other scripts
+
+###### Client
+* `npm test` : Run tests
+###### Server
+* `npm test` : Run tests
+
+#### License
+
+[MIT licensed](./LICENSE).
