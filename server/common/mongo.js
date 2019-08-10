@@ -15,8 +15,19 @@ class Mongo {
         db.once('open', () => console.log('MongoDB connected'));
     }
 
-    disconnect() {
-        mongoose.disconnect(done);
+    async disconnect() {
+        return mongoose.disconnect();
+    }
+
+    async removeAll() {
+        return Promise.all(
+            Object.keys(mongoose.connection.collections).map(collection => {
+                    mongoose.connection.collections[collection].drop((err) => {
+                        console.log('collection dropped');
+                    })
+                }
+            )
+        );
     }
 }
 

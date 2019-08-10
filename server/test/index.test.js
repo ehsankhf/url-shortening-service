@@ -7,8 +7,9 @@ describe('GET /', () => {
     beforeAll(() => {
         mongo.connect();
     });
-    afterAll((done) => {
-        mongo.disconnect(done);
+    afterAll(async () => {
+        await mongo.removeAll();
+        return mongo.disconnect();
     });
 
     test('should response the GET method', async() => {
