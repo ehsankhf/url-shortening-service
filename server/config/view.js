@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = (app) => {
     app.set('views', path.join(__dirname,'..', 'views'));

@@ -1,24 +1,14 @@
 {
-    "development": {
-      "username": "root",
-      "password": null,
-      "database": "database_development",
-      "dialect": "sqlite",
-      "storage": "./main.sqlite"
-    },
-    "test": {
-      "username": "root",
-      "password": null,
-      "database": "database_test",
-      "dialect": "sqlite",
-      "storage": "./main.sqlite"
-    },
-    "production": {
-      "username": "root",
-      "password": null,
-      "database": "database_production",
-      "dialect": "sqlite",
-      "storage": "./main.sqlite"
-    }
+  "development": {
+    "username": "root",
+    "password": null,
+    "db_name": "database_development",
+    "db_url": "mongodb://127.0.0.1"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "db_name": "database_development",
+    "db_url": "mongodb://127.0.0.1"
   }
-  
+}

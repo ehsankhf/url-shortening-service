@@ -1,4 +1,4 @@
-var indexRouter = require('../modules/routes');
+const indexRouter = require('../modules/routes');
 
 module.exports = (app) => {
     app.use('/', indexRouter);

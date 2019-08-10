@@ -1,11 +1,16 @@
-var viewConfig = require('./config/view');
-var errorConfig = require('./config/error');
-var utilitiesConfig = require('./config/utilities');
-var routesConfig = require('./config/routes');
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
-var express = require('express');
+const viewConfig = require('./config/view');
+const errorConfig = require('./config/error');
+const utilitiesConfig = require('./config/utilities');
+const routesConfig = require('./config/routes');
+const mongo = require('./common/mongo');
 
-var app = express();
+const express = require('express');
+
+const app = express();
+
+mongo.connect();
 
 viewConfig(app);
 utilitiesConfig(app);
