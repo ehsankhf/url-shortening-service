@@ -9,8 +9,9 @@ In both of the following methods, ports are a following:
   
 ###### Without Docker
 
-  * Client-side: `cd client; yarn; yarn serve`
-  * Server-side: `cd server; yarn; yarn start`
+  1. Start mongo server locally
+  2. Client-side: `cd client; yarn; yarn serve`
+  3. Server-side: `cd server; yarn; yarn start-local`
 
 ###### With Docker
   * Without build: `docker-compose up`
