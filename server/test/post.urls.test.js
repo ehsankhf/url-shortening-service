@@ -3,7 +3,7 @@ const app = require('../app')
 
 const mongo = require('../common/mongo')
 
-describe('POST /urls', () => {
+describe.only('POST /urls', () => {
     beforeEach(() => {
         mongo.connect();
     });
