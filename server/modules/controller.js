@@ -8,7 +8,7 @@ class Controller {
     }
 
     async getAllUrls(req, res) {
-        const urls = await Models.find({})
+        const urls = await Models.find({}).sort({ _id: -1 })
         res.send(urls)
     }
 
