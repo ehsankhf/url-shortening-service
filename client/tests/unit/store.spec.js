@@ -3,7 +3,6 @@ import moxios from 'moxios'
 
 import Store from '../../src/store';
 
-// destructure assign `mutations`
 const { SET_URLS, SET_CURRENT_SHORT_URL } = Store.mutations
 const { getShortUrl, getUrls } = Store.actions
 
