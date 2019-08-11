@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <request-input v-on:get-short-url="preGetShortUrl"/>
         <url-list :urls="urls"/>
     </div>

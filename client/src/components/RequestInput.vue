@@ -1,8 +1,12 @@
 <template>
-    <form @submit="getShortUrl" class="request-input">
-        <input type="text" v-model="inputUrl">
-        <input type="submit">
-    </form>
+    <div class="request-input">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" v-model="inputUrl" placeholder="Please enter a URL..." aria-label="Please enter a URL" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="input-group-text" id="basic-addon2" v-on:click="getShortUrl">Generate Short URL</button>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>

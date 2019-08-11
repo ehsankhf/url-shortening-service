@@ -1,8 +1,16 @@
 <template>
     <div class="url-list">
-        <div :key="url.short_url_id" v-for="url in urls">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Source URL</th>
+                <th scope="col">Shortened URL</th>
+            </tr>
+            </thead>
+            <tbody :key="url._id" v-for="url in urls">
             <UrlItem v-bind:url="url"/>
-        </div>
+            </tbody>
+        </table>
     </div>
 </template>
 
@@ -25,5 +33,7 @@
 
 <style scoped>
     .url-list {
+        height: 80vh;
+        overflow: scroll;
     }
 </style>

@@ -1,12 +1,12 @@
 import {shallowMount} from '@vue/test-utils'
 import RequestInput from '@/components/RequestInput'
 
-describe('Main.vue', () => {
+describe('RequestInput.vue', () => {
     it('renders successfully', () => {
         const wrapper = shallowMount(RequestInput, {})
         expect(wrapper.find('.request-input').exists()).toBe(true)
         expect(wrapper.find('input[type=text]').exists()).toBe(true)
-        expect(wrapper.find('input[type=submit]').exists()).toBe(true)
+        expect(wrapper.find('button').exists()).toBe(true)
     })
 
     it('should call the event with the initial value of inputUrl', () => {

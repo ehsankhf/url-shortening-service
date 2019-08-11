@@ -1,10 +1,12 @@
 <template>
-    <div class="url-item">
-        <span>{{url.url}}</span>{{ }}
-        <a :href="'http://localhost:3000/short/'+url.short_url_id">
-            {{'http://localhost:3000/short/'+url.short_url_id}}
-        </a>
-    </div>
+    <tr class="url-item">
+        <td>{{url.url}}</td>
+        <td>
+            <a :href="'http://localhost:3000/short/'+url.short_url_id">
+                {{'http://localhost:3000/short/'+url.short_url_id}}
+            </a>
+        </td>
+    </tr>
 </template>
 
 <script>
