@@ -13,7 +13,8 @@ In both of the following methods, ports are a following:
   * Server-side: `cd server; yarn; yarn start`
 
 ###### With Docker
-  * `docker-compose up`
+  * Without build: `docker-compose up`
+    * **NOTE:** For the first run please run the above command with adding `--build` to its end.
 
 #### Other scripts
 

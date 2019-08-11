@@ -3,13 +3,13 @@
     "username": "root",
     "password": null,
     "db_name": "database_development",
-    "db_url": "mongodb://127.0.0.1",
+    "db_url": "mongodb://mongodb",
     "port": "3000"
   },
   "test": {
     "username": "root",
     "password": null,
-    "db_name": "database_development",
+    "db_name": "database_test",
     "db_url": "mongodb://127.0.0.1",
     "port": "9876"
   }
