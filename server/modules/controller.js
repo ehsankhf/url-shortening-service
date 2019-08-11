@@ -13,16 +13,21 @@ class Controller {
     }
 
     async addOneUrl(req, res) {
-        const { url } = req.body;
+        let { url } = req.body;
 
-        if (!url) {
+        if (!url || !url.length) {
             return res.setHeader(400).send()
         }
 
+        if (!/^https?:\/\//.test(url)) {
+            url = (`http://${url}`)
+        }
+
         let urlObject = await Models.findOne({ url })
+        console.log(urlObject)
         if (!urlObject) {
             urlObject = {
-                url, short_url_id: uuidv3('http://example.com/hello', uuidv3.URL)
+                url, short_url_id: uuidv3(url, uuidv3.URL)
             }
             await Models.create(urlObject)
         }
