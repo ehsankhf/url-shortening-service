@@ -19,9 +19,9 @@ In both of the following methods, ports are a following:
 #### Other scripts
 
 ###### Client
-* `npm test` : Run tests
+* `npm test` : Run tests (please use `cd client` before running this command)
 ###### Server
-* `npm test` : Run tests
+* `npm test` : Run tests (please use `cd server` before running this command)
 
 #### License
 

@@ -12,12 +12,12 @@ export default {
     },
     actions: {
         getUrls: ({ commit }) => {
-            return axios.get("http://localhost:3000/todos").then(response => {
+            return axios.get("http://localhost:3000/urls").then(response => {
                 commit("SET_URLS", response.data);
             });
         },
         getShortUrl: ({ commit }, url) => {
-            return axios.post("http://localhost:3000/todos", { url }).then(response => {
+            return axios.post("http://localhost:3000/urls", { url }).then(response => {
                 commit("SET_CURRENT_SHORT_URL", `http://localhost:3000/short/${response.data.short_url_id}`);
             });
         }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <request-input v-on:get-short-url="preGetShortUrl"/>
-        <url-list/>
+        <url-list :urls="urls"/>
     </div>
 </template>
 
@@ -21,15 +21,16 @@
             preGetShortUrl(url) {
                 if (url.length) {
                     if (!/^http:\/\//.test(url)) {
-                        return this.getShortUrl(`http://${url}`)
+                        return this.getShortUrl(`http://${url}`).then(this.getUrls)
                     }
-                    this.getShortUrl(url)
+                    this.getShortUrl(url).then(this.getUrls)
                 }
             },
             ...mapActions(['getUrls', 'getShortUrl'])
         },
         computed: mapGetters(["urls", "currentShortUrl"]),
         created() {
+            this.getUrls()
         }
     }
 </script>

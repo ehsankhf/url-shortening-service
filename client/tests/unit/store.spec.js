@@ -28,7 +28,7 @@ describe('store', () => {
             const commit = sinon.spy()
 
             moxios.install()
-            moxios.stubRequest('http://localhost:3000/todos', {
+            moxios.stubRequest('http://localhost:3000/urls', {
                 status: 200,
                 response: [{ url: 'yahoo.com', short_url_id: '233232323' }]
             });
@@ -45,7 +45,8 @@ describe('store', () => {
             const commit = sinon.spy()
 
             moxios.install()
-            moxios.stubRequest('http://localhost:3000/todos', {
+
+            moxios.stubRequest('http://localhost:3000/urls', {
                 status: 200,
                 response: { url: 'yahoo123.com', short_url_id: '233232323' }
             });
